@@ -1,0 +1,133 @@
+:root {
+  --texte: #1c1c1c;
+  --texte-doux: #4a4a4a;
+  --fond: #ffffff;
+  --fond-doux: #f6f4ef;
+  --accent: #8a5a00;
+  --ligne: #e3dfd6;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--fond);
+  color: var(--texte);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+main, .pied-contenu, .entete-contenu {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+a { color: var(--accent); text-underline-offset: 0.15em; }
+a:hover, a:focus { color: var(--texte); }
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+.lien-evitement {
+  position: absolute;
+  left: -999px;
+}
+.lien-evitement:focus {
+  left: 1rem;
+  top: 1rem;
+  background: var(--fond);
+  padding: 0.5rem 0.75rem;
+  z-index: 10;
+}
+
+/* Accueil */
+.hero {
+  text-align: center;
+  padding: 2rem 0 1rem;
+}
+.hero img {
+  width: 100%;
+  max-width: 30rem;
+  height: auto;
+}
+.hero h1 {
+  font-size: clamp(1.6rem, 5vw, 2.2rem);
+  line-height: 1.2;
+  margin: 1rem 0 0.5rem;
+}
+.hero .slogan {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+.hero .sous-titre {
+  color: var(--texte-doux);
+  margin: 0.25rem auto 0;
+  max-width: 34rem;
+}
+
+section {
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--ligne);
+}
+section h2 {
+  font-size: 1.35rem;
+  margin: 0 0 0.75rem;
+}
+
+ol.etapes {
+  padding-left: 1.4rem;
+  margin: 0;
+}
+ol.etapes li { margin-bottom: 0.5rem; }
+
+.contact {
+  background: var(--fond-doux);
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  border-top: none;
+  margin: 1rem 0 2rem;
+}
+.contact .courriel {
+  font-size: 1.2rem;
+  font-weight: 600;
+  word-break: break-word;
+}
+
+/* Page des conditions */
+.page-texte { padding: 1.5rem 1rem 2rem; }
+.page-texte .retour { display: inline-block; margin-bottom: 1rem; }
+.page-texte h1 { font-size: clamp(1.5rem, 4.5vw, 2rem); line-height: 1.25; margin: 1.5rem 0 0.75rem; }
+.page-texte h2 { font-size: 1.15rem; margin: 1.25rem 0 0.25rem; }
+.page-texte p { margin: 0.25rem 0 0.75rem; }
+.page-texte .meta { color: var(--texte-doux); }
+.page-texte hr { border: none; border-top: 1px solid var(--ligne); margin: 2.5rem 0 1rem; }
+[id] { scroll-margin-top: 1rem; }
+
+/* Entête des pages secondaires */
+.entete {
+  border-bottom: 1px solid var(--ligne);
+  padding: 0.5rem 0;
+}
+.entete a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--texte);
+  text-decoration: none;
+  font-weight: 600;
+}
+.entete img { width: 3.5rem; height: auto; }
+
+/* Pied de page */
+footer {
+  background: var(--fond-doux);
+  border-top: 1px solid var(--ligne);
+  color: var(--texte-doux);
+  font-size: 0.95rem;
+  padding: 1.25rem 0 1.5rem;
+}
+footer p { margin: 0.25rem 0; }
+footer nav a { margin-right: 1rem; display: inline-block; }
